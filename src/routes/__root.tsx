@@ -1,21 +1,30 @@
 import * as React from "react";
 import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 export const Route = createRootRoute({
-  component: RootComponent,
-});
-
-function RootComponent() {
-  return (
-    <React.Fragment>
-      <div>
-        <Link>Collection</Link>
-        <Link>Men</Link>
-        <Link>Women</Link>
-        <Link>About</Link>
-        <Link>Contact</Link>
+  component: () => (
+    <>
+      <div className="p-2 flex gap-2">
+        <Link to="/" className="[&.active]:font-bold">
+          Collection
+        </Link>{" "}
+        <Link to="/men" className="[&.active]:font-bold">
+          Men
+        </Link>
+        <Link to="/women" className="[&.active]:font-bold">
+          Women
+        </Link>
+        <Link to="/about" className="[&.active]:font-bold">
+          About
+        </Link>
+        <Link to="/contact" className="[&.active]:font-bold">
+          Contact
+        </Link>
       </div>
+      <hr />
       <Outlet />
-    </React.Fragment>
-  );
-}
+      {/* <TanStackRouterDevtools /> */}
+    </>
+  ),
+});
