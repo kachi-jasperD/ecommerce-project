@@ -1,3 +1,4 @@
+import Sneakers from "@/pages/Sneakers";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -7,7 +8,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="p-2">
-      <h3>Welcome To The Home Page</h3>
+      <Sneakers />
     </div>
   );
 }
