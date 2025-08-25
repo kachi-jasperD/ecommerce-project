@@ -24,15 +24,15 @@ const Sneakers = () => {
   };
 
   return (
-    <div className="md:flex gap-10">
+    <div className="md:flex gap-10 ">
       <div>
         {largeImage && <img src={largeImage} alt="large" />}
 
-        <div className="md:hidden">
-          <div>
+        <div className="flip-icon md:hidden flex justify-between relative bottom-50 ">
+          <div className="border rounded-full bg-white w-10 h-10 p-3">
             <img src={previous} alt="previous-icon" />
           </div>
-          <div>
+          <div className="border rounded-full bg-white w-10 h-10 p-3">
             <img src={next} alt="next-icon" />
           </div>
         </div>
